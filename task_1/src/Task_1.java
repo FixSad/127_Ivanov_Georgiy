@@ -122,7 +122,23 @@ public class Task_1 implements Task_1_base {
         // 2 - аргументы функции заданы некорректно
         // Допустимой погрешностью при сравнении переменных типа double считать 0.000001
         // ------------------------------------------------------------------------------------
-        return 0; // Замените данный оператор кодом, решающим поставленную задачу.
+        if ((speed < 0.0) || (time < 0.0)) {
+            System.out.println("2");
+            return 2;
+        }
+        else {
+            if (vx != 0) {
+                double crashY = (wall / vx) * vy;
+                double crashZ = (wall / vx) * vz;
+                double length = Math.sqrt(wall * wall + crashY * crashY + crashZ * crashZ);
+                if ((length / speed - time) > 0.000001)
+                    return 0;
+                else
+                    return 1;
+            }
+            else
+                return 0;
+        }
     }
     @Override
     public int subtask_8_if(double k1, double b1, double k2, double b2) {
