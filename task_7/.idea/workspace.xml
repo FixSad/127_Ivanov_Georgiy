@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="35799b64-ed48-4b2f-bbda-50bcb497f6c0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/task/Alchemist.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/ArmorDestroyer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/BattleUnit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/BattleUnitBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/task/Infantryman.java" afterDir="false" />
+    <list default="true" id="f2a14914-fab7-4fe9-a141-01bf19b9bd56" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../task_6/src/task/BattleUnit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_6/src/task/Triangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task_6/src/task/WebAddressParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/task/Direction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/task/Race.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,16 +16,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
-        <option value="AnnotationType" />
-        <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="223sKLaZJ2VsvJa0MttXoSwvNbm" />
+  <component name="ProjectId" id="20ahioF6TJmEKO0pebULwaP22RA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -40,7 +38,7 @@
   <component name="RunManager">
     <configuration name="Runner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="task.Runner" />
-      <module name="task_8" />
+      <module name="task_7" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="task.*" />
@@ -60,11 +58,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="35799b64-ed48-4b2f-bbda-50bcb497f6c0" name="Changes" comment="" />
-      <created>1639077539467</created>
+      <changelist id="f2a14914-fab7-4fe9-a141-01bf19b9bd56" name="Changes" comment="" />
+      <created>1636288735882</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1639077539467</updated>
+      <updated>1636288735882</updated>
     </task>
     <servers />
   </component>
