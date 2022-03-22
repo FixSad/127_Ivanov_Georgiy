@@ -22,4 +22,10 @@ public class task1_tests extends Assert{
         assertTrue(0 == list.getSize());
     }
 
+    @Test
+    public void pushFront_PushFrontDoubleLinkedList_sizeCorrect(){
+        DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+        list.pushFront(1);
+        assertTrue(1 == list.getSize());
+    }
 }
