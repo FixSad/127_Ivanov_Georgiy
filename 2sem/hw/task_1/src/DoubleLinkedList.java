@@ -41,7 +41,7 @@ public class DoubleLinkedList<T> {
         return insertBefore(getTail(), data);
     }
     public Node<T> pushBack(T data) {
-        return insertAfter(getHead(), data);
+        return insertBefore(getTail(), data);
     }
     public void remove(ListNode<T> node) {
         node.getPrev().setPrev(node.getNext());
