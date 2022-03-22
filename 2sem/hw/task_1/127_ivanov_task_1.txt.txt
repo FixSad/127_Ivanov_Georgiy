@@ -2,3 +2,4 @@ DoubleLinkedList|11|return dummy == dummy -> return size == 0|createDoubleLinked
 DoubleLinkedList|24|if(index < 0 || index > size) -> if(index < 0 || index >= size)|pushFront_PushFrontEmptyDoubleLinkedList_TryToGetAnotherNumber
 DoubleLinkedList|17|return dummy.getPrev() -> return dummy.getNext()|getHead_PushFrontEmptyDoubleLinkedList_TryToGetHead
 DoubleLinkedList|20|return dummy.getNext() -> return dummy.getPrev()|getTail_PushFrontEmptyDoubleLinkedList_TryToGetTail
+DoubleLinkedList|44|return insertAfter(getHead(), data) -> return insertBefore(getTail(), data)|getHead_PushBackEmptyDoubleLinkedList_TryToGetHead
