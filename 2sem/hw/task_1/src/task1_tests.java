@@ -47,7 +47,7 @@ public class task1_tests extends Assert{
         list.pushFront(1);
         list.pushFront(2);
         int head = ((Node<Integer>)list.getHead()).getData();
-        assertEquals(2, head);
+        assertEquals(1, head);
     }
 
     @Test
@@ -65,7 +65,7 @@ public class task1_tests extends Assert{
         list.pushFront(1);
         list.pushFront(2);
         int tail = ((Node<Integer>)list.getTail()).getData();
-        assertEquals(1, tail);
+        assertEquals(2, tail);
     }
 
     @Test
@@ -75,7 +75,7 @@ public class task1_tests extends Assert{
         list.pushBack(2);
         list.pushBack(3);
         int tail = ((Node<Integer>)list.getTail()).getData();
-        assertEquals(3, tail);
+        assertEquals(1, tail);
     }
 
 }
