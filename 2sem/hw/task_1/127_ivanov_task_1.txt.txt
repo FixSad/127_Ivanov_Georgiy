@@ -4,3 +4,4 @@ DoubleLinkedList|17|return dummy.getPrev() -> return dummy.getNext()|getHead_Pus
 DoubleLinkedList|20|return dummy.getNext() -> return dummy.getPrev()|getTail_PushFrontEmptyDoubleLinkedList_TryToGetTail
 DoubleLinkedList|44|return insertAfter(getHead(), data) -> return insertBefore(getTail(), data)|getHead_PushBackEmptyDoubleLinkedList_TryToGetHead
 DoubleLinkedList|41|return insertBefore(getTail(), data) -> return insertAfter(getHead(), data)|getHead_PushBackEmptyDoubleLinkedList_TryToGetHead
+DoubleLinkedList|33|--size -> ++size|get_PushFrontEmptyDoubleLinkedList_CheckFirst
