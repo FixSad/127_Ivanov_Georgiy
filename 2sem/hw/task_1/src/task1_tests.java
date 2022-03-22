@@ -16,4 +16,10 @@ public class task1_tests extends Assert{
         assertFalse(list.isEmpty());
     }
 
+    @Test
+    public void getSize_getSizeFromEmptyDoubleLinkedList_sizeCorrect(){
+        DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+        assertTrue(0 == list.getSize());
+    }
+
 }
