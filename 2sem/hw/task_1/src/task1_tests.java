@@ -40,4 +40,13 @@ public class task1_tests extends Assert{
             assertFalse(false);
         }
     }
+
+    @Test
+    public  void getHead_PushFrontEmptyDoubleLinkedList_TryToGetHead(){
+        DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+        list.pushFront(1);
+        list.pushFront(2);
+        int head = ((Node<Integer>)list.getHead()).getData();
+        assertEquals(2, head);
+    }
 }
