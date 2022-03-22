@@ -1,0 +1,1 @@
+DoubleLinkedList|11|return dummy == dummy -> return size == 0|createDoubleLinkedList_CreateEmptyDoubleLinkedList_EmptyFalse
