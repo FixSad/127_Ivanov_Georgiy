@@ -12,6 +12,8 @@ DoubleLinkedList|48|node.getNext().setNext(node.getPrev()); -> node.getNext().se
 DoubleLinkedList|55|list.getHead().setNext(node); -> list.getHead().setPrev(node);|insertListAfter_CreateTwoListsAndUnite_CheckValues
 DoubleLinkedList|56|list.getTail().setPrev(node.getNext()); -> list.getTail().setNext(node.getNext());|insertListAfter_CreateTwoListsAndUnite_CheckValues
 DoubleLinkedList|74| -> size += list.getSize();|insertListBefore_TryToInsertListBefore_CheckSize
+DoubleLinkedList|67|list.getHead().setNext(node.getPrev()); -> list.getHead().setPrev(node.getPrev());|insertListBefore_TryToInsertListBefore_CheckValues
+DoubleLinkedList|68|list.getTail().setPrev(node); -> list.getTail().setNext(node);|insertListBefore_TryToInsertListBefore_CheckValues
 
 Node|13|this.next = prev; -> this.next = next;|pushFront_PushFrontValuesDoubleLinkedList_CheckValues
 Node|14|this.prev = next; -> this.prev = prev;|pushFront_PushFrontValuesDoubleLinkedList_CheckValues
