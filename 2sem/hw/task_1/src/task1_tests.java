@@ -140,7 +140,7 @@ public class task1_tests extends Assert{
     }
 
     @Test
-    public void insertListAfter_CreateTwoListsAndUnite_CheckTail(){
+    public void insertListAfter_CreateTwoListsAndUnite_CheckValues(){
         DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
         list.pushFront(1);
         list.pushFront(5);
@@ -163,7 +163,7 @@ public class task1_tests extends Assert{
         num1 = ((Node<Integer>)list.get(4)).getData();
         assertEquals(5, num1);
         num1 = ((Node<Integer>)list.get(5)).getData();
-        assertEquals(5, num1);
+        assertEquals(6, num1);
     }
 
     @Test
