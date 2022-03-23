@@ -241,4 +241,16 @@ public class task1_tests extends Assert{
             assertEquals("Index out of bounds", some.getMessage());
         }
     }
+
+    @Test
+    public void insert_TryToInsertValueOutOfBounds_CheckException(){
+        DynamicArray<Integer> array = new DynamicArray<>(5);
+        try {
+            array.insert(6,10);
+            fail();
+        }
+        catch (IndexOutOfBoundsException some) {
+            assertEquals("Index out of bounds", some.getMessage());
+        }
+    }
 }
