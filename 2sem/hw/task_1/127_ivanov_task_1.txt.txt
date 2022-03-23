@@ -5,3 +5,4 @@ DoubleLinkedList|20|return dummy.getNext() -> return dummy.getPrev()|getTail_Pus
 DoubleLinkedList|44|return insertAfter(getHead(), data) -> return insertBefore(getTail(), data)|getHead_PushBackEmptyDoubleLinkedList_TryToGetHead
 DoubleLinkedList|41|return insertBefore(getTail(), data) -> return insertAfter(getHead(), data)|getHead_PushBackEmptyDoubleLinkedList_TryToGetHead
 DoubleLinkedList|33|--size -> ++size|get_PushFrontEmptyDoubleLinkedList_CheckFirst
+DoubleLinkedList|62| -> size += list.getSize()|insertListAfter_CreateTwoListsAndUnite_CheckSize
