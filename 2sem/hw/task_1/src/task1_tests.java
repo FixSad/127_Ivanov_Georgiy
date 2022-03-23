@@ -246,6 +246,7 @@ public class task1_tests extends Assert{
         list1.pushFront(1);
         list1.pushFront(2);
         list1.pushFront(3);
+        list.insertListBefore(list.get(0), list1);
         int num1 = ((Node<Integer>)list.get(0)).getData();
         assertEquals(1, num1);
         num1 = ((Node<Integer>)list.get(1)).getData();
