@@ -95,7 +95,7 @@ public class task1_tests extends Assert{
         list.pushBack(2);
         list.pushBack(1);
 
-        int num = ((Node<Integer>)list.get(0)).getData();
+        int num = ((Node<Integer>)list.get(2)).getData();
         assertEquals(1, num);
     }
 
@@ -107,6 +107,20 @@ public class task1_tests extends Assert{
         list.pushFront(3);
         list.remove(list.get(0));
         assertEquals(2, list.getSize());
+    }
+
+    @Test
+    public void insertListAfter_CreateTwoListsAndUnite_CheckSize(){
+        DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+        list.pushFront(1);
+        list.pushFront(2);
+        list.pushFront(3);
+        DoubleLinkedList<Integer> list1 = new DoubleLinkedList<>();
+        list.pushFront(1);
+        list.pushFront(2);
+        list.pushFront(3);
+        list.insertListAfter(list.get(0), list1);
+        assertEquals(6, list.getSize());
     }
 
 
