@@ -95,7 +95,7 @@ public class task1_tests extends Assert{
         list.pushBack(2);
         list.pushBack(1);
 
-        int num = ((Node<Integer>)list.get(2)).getData();
+        int num = ((Node<Integer>)list.get(0)).getData();
         assertEquals(1, num);
     }
 
