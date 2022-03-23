@@ -9,6 +9,8 @@ DoubleLinkedList|62| -> size += list.getSize()|insertListAfter_CreateTwoListsAnd
 DoubleLinkedList|28|cur = cur.getPrev(); -> cur = cur.getNext();|pushFront_PushFrontValuesDoubleLinkedList_CheckValues
 DoubleLinkedList|47|node.getPrev().setPrev(node.getNext()); -> node.getPrev().setNext(node.getNext());|remove_RemoveAElement_CheckValue
 DoubleLinkedList|48|node.getNext().setNext(node.getPrev()); -> node.getNext().setPrev(node.getPrev());|remove_RemoveAElement_CheckValue
+DoubleLinkedList|55|list.getHead().setNext(node); -> list.getHead().setPrev(node);|insertListAfter_CreateTwoListsAndUnite_CheckValues
+DoubleLinkedList|56|list.getTail().setPrev(node.getNext()); -> list.getTail().setNext(node.getNext());|insertListAfter_CreateTwoListsAndUnite_CheckValues
 
 Node|13|this.next = prev; -> this.next = next;|pushFront_PushFrontValuesDoubleLinkedList_CheckValues
 Node|14|this.prev = next; -> this.prev = prev;|pushFront_PushFrontValuesDoubleLinkedList_CheckValues
