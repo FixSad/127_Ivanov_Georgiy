@@ -192,6 +192,7 @@ public class task1_tests extends Assert{
 
 
 
+
     @Test
     public void createArray_SetSizeNewArray_CheckSize(){
         DynamicArray<Integer> array = new DynamicArray<>(5);
