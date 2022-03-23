@@ -166,6 +166,23 @@ public class task1_tests extends Assert{
         assertEquals(5, num1);
     }
 
+    @Test
+    public void pushFront_PushFrontValuesDoubleLinkedList_CheckValues(){
+        DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+        list.pushFront(1);
+        list.pushFront(2);
+        list.pushFront(3);
+        list.pushFront(4);
+
+        int num1 = ((Node<Integer>)list.get(0)).getData();
+        assertEquals(1, num1);
+        num1 = ((Node<Integer>)list.get(1)).getData();
+        assertEquals(2, num1);
+        num1 = ((Node<Integer>)list.get(2)).getData();
+        assertEquals(3, num1);
+        num1 = ((Node<Integer>)list.get(3)).getData();
+        assertEquals(4, num1);
+    }
 
 
 
