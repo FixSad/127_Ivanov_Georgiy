@@ -18,3 +18,4 @@ DynamicArray|42|if(capacity < size) { -> if(capacity <= size) {|insert_TryToInse
 DynamicArray|49|data[size] = value -> data[index] = value;|insert_TryToInsertANumber_CheckNewValue
 DynamicArray|52|if(capacity < size) { -> if(capacity <= size) {|pushBack_TryToPushBackNumbers_CheckValues
 DynamicArray|56|data[capacity] = value; -> data[size] = value;|pushBack_TryToPushBackNumbers_CheckValues
+DynamicArray|60|if(size < 0) -> if(size <= 0)|popBack_TryToPopBackInEmptyArray_CheckException
