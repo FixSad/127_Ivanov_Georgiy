@@ -6,3 +6,5 @@ DoubleLinkedList|44|return insertAfter(getHead(), data) -> return insertBefore(g
 DoubleLinkedList|41|return insertBefore(getTail(), data) -> return insertAfter(getHead(), data)|getHead_PushBackEmptyDoubleLinkedList_TryToGetHead
 DoubleLinkedList|33|--size -> ++size|get_PushFrontEmptyDoubleLinkedList_CheckFirst
 DoubleLinkedList|62| -> size += list.getSize()|insertListAfter_CreateTwoListsAndUnite_CheckSize
+
+DynamicArray|11|size = 1 -> size = DefaultSize|createArray_CreateEmptyArray_CheckSize
