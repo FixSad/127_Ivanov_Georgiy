@@ -115,11 +115,12 @@ public class task1_tests extends Assert{
         list.pushFront(1);
         list.pushFront(2);
         list.pushFront(3);
-        DoubleLinkedList<Integer> list1 = new DoubleLinkedList<>();
-        list.pushFront(1);
-        list.pushFront(2);
-        list.pushFront(3);
-        list.insertListAfter(list.get(0), list1);
+
+        DoubleLinkedList<Integer> list2 = new DoubleLinkedList<>();
+        list2.pushFront(4);
+        list2.pushFront(5);
+        list2.pushFront(6);
+        list.insertListAfter(list.get(0), list2);
         assertEquals(6, list.getSize());
     }
 
@@ -130,12 +131,27 @@ public class task1_tests extends Assert{
         list.pushFront(2);
         list.pushFront(3);
         DoubleLinkedList<Integer> list1 = new DoubleLinkedList<>();
-        list.pushFront(1);
-        list.pushFront(2);
-        list.pushFront(3);
-        list.insertListAfter(list.get(0), list1);
+        list1.pushFront(4);
+        list1.pushFront(5);
+        list1.pushFront(6);
+        list1.insertListAfter(list.get(0), list1);
         int head = ((Node<Integer>)list.getHead()).getData();
         assertEquals(1, head);
+    }
+
+    @Test
+    public void insertListAfter_CreateTwoListsAndUnite_CheckTail(){
+        DoubleLinkedList<Integer> list = new DoubleLinkedList<>();
+        list.pushFront(1);
+        list.pushFront(5);
+        list.pushFront(6);
+        DoubleLinkedList<Integer> list1 = new DoubleLinkedList<>();
+        list1.pushFront(2);
+        list1.pushFront(3);
+        list1.pushFront(4);
+        list.insertListAfter(list.get(0), list1);
+        int tail = ((Node<Integer>)list.getTail()).getData();
+        assertEquals(6, tail);
     }
 
 }
