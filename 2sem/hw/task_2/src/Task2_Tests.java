@@ -16,4 +16,20 @@ public class Task2_Tests extends Assert {
         sorter.sort(myArray, comparator);
         assertArrayEquals(new Integer[]{1, 2, 3}, myArray);
     }
+
+    class SomeComparator implements MyComparator<Integer>{
+        @Override
+        public int compare(Integer first, Integer second) {
+            return first - second;
+        }
+    }
+
+    @Test
+    public void bubbleSort_CreateMyBubbleSort_TryToSortDifferentNumbers(){
+
+        BubbleSort<Integer> sorter = new BubbleSort<>();
+        Integer[] myArray = {2, 1, 3};
+        sorter.sort(myArray, new SomeComparator());
+        assertArrayEquals(new Integer[]{1, 2, 3}, myArray);
+    }
 }
