@@ -56,5 +56,12 @@ public class Task2_Tests extends Assert {
         assertArrayEquals(new Integer[]{2}, myArray);
     }
 
+    @Test
+    public void insertionSort_CreateMyInsertionSort_TryToCompareTheSameArrays(){
+        InsertionSort<Integer> sorter = new InsertionSort<>();
+        Integer[] myArray = {1, 2, 3};
+        sorter.sort(myArray, new SomeComparator());
+        assertArrayEquals(new Integer[]{1, 2, 3}, myArray);
+    }
 
 }
