@@ -466,4 +466,6 @@ public class task1_tests extends Assert{
         array.remove(3);
         assertEquals(4, array.getSize());
     }
+
+
 }
