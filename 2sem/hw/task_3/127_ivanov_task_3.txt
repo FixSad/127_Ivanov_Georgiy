@@ -2,4 +2,5 @@ QuickSort|12|int base = split(data, e, b); -> int base = split(data, b, e);|quic
 QuickSort|24|swap(data, left, baseElem); -> swap(data, left - 1, baseElem);|quickSort_CreateNewQuickSort_TryToSortTwoItems
 MergeSort|35|else if (comparator.compare(from[firstFocus], from[secondFocus]) > 0) -> else if (comparator.compare(from[firstFocus], from[secondFocus]) < 0)|mergeSort_CreateNewMergeSort_TryToCompareThreeItemsArrays
 MergeSort|19|merge(buffer, sorting, begin, middle - begin, end - middle); -> merge(buffer, sorting, begin, middle - begin + 1, end - middle);|mergeSort_CreateNewMergeSort_TryToSortTwoItems
-MergeSort|19|mergeSortRec(sorting, buffer, begin, middle); -> mergeSortRec(buffer, sorting, begin, middle);|mergeSort_CreateNewMergeSort_TryToSortThreeItems
+MergeSort|17|mergeSortRec(sorting, buffer, begin, middle); -> mergeSortRec(buffer, sorting, begin, middle);|mergeSort_CreateNewMergeSort_TryToSortThreeItems
+MergeSort|34|to[resPos++] = from[firstFocus]; -> to[resPos++] = from[firstFocus++];|mergeSort_CreateNewMergeSort_TryToSortThreeReversedItems
