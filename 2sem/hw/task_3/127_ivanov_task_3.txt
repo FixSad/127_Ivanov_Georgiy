@@ -1,2 +1,2 @@
 QuickSort|12|int base = split(data, e, b); -> int base = split(data, b, e);|quickSort_CreateNewQuickSort_TryToSortTwoItems
-QuickSort|22|while (left <= right && comparator.compare(data[left], data[baseElem]) <= 0) -> while (left < right && comparator.compare(data[left], data[baseElem]) <= 0)|quickSort_CreateNewQuickSort_TryToSortTwoItems
+QuickSort|24|swap(data, left, baseElem); -> swap(data, left - 1, baseElem);|quickSort_CreateNewQuickSort_TryToSortTwoItems
