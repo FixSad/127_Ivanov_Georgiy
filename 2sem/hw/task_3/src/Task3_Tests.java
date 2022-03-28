@@ -210,4 +210,19 @@ public class Task3_Tests extends Assert{
         sorter.sort(array, comparator);
         assertArrayEquals(new Integer[]{1, 2, 3, 4, 5, 6, 7, 9}, array);
     }
+
+    @Test
+    public void heapSort_CreateNewHeapSort_TryToCompareTwoItemsArrays(){
+        HeapSort<Integer> sorter = new HeapSort<>();
+        Integer[] array = {1, 2};
+        MyComparator<Integer> comparator = new MyComparator<Integer>() {
+            @Override
+            public int compare(Integer first, Integer second) {
+                return first - second;
+            }
+        };
+        sorter.sort(array, comparator);
+        assertArrayEquals(new Integer[]{1, 2}, array);
+    }
+
 }
