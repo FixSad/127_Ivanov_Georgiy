@@ -225,4 +225,18 @@ public class Task3_Tests extends Assert{
         assertArrayEquals(new Integer[]{1, 2}, array);
     }
 
+    @Test
+    public void quickSort_CreateNewQuickSort_TryToSortAgain(){
+        QuickSort<Integer> sorter = new QuickSort<>();
+        Integer[] array = {5, 2, 1, 0 , 6, 0, 3};
+        MyComparator<Integer> comparator = new MyComparator<Integer>() {
+            @Override
+            public int compare(Integer first, Integer second) {
+                return first - second;
+            }
+        };
+        sorter.sort(array, comparator);
+        assertArrayEquals(new Integer[]{0, 0, 1, 2, 3, 5, 6}, array);
+    }
+
 }
