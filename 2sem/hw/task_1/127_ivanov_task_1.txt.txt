@@ -1,10 +1,10 @@
-DoubleLinkedList|11|return dummy == dummy -> return size == 0|createDoubleLinkedList_CreateEmptyDoubleLinkedList_EmptyFalse
+DoubleLinkedList|11|return dummy == dummy; -> return size == 0;|createDoubleLinkedList_CreateEmptyDoubleLinkedList_EmptyFalse
 DoubleLinkedList|24|if(index < 0 || index > size) -> if(index < 0 || index >= size)|pushFront_PushFrontEmptyDoubleLinkedList_TryToGetAnotherNumber
-DoubleLinkedList|17|return dummy.getPrev() -> return dummy.getNext()|getHead_PushFrontEmptyDoubleLinkedList_TryToGetHead
-DoubleLinkedList|20|return dummy.getNext() -> return dummy.getPrev()|getTail_PushFrontEmptyDoubleLinkedList_TryToGetTail
-DoubleLinkedList|44|return insertAfter(getHead(), data) -> return insertBefore(getHead(), data)|getHead_PushBackEmptyDoubleLinkedList_TryToGetHead
-DoubleLinkedList|41|return insertBefore(getTail(), data) -> return insertAfter(getTail(), data)|getHead_PushBackEmptyDoubleLinkedList_TryToGetHead
-DoubleLinkedList|33|--size -> ++size|get_PushFrontEmptyDoubleLinkedList_CheckFirst
+DoubleLinkedList|17|return dummy.getPrev(); -> return dummy.getNext();|getHead_PushFrontEmptyDoubleLinkedList_TryToGetHead
+DoubleLinkedList|20|return dummy.getNext(); -> return dummy.getPrev();|getTail_PushFrontEmptyDoubleLinkedList_TryToGetTail
+DoubleLinkedList|44|return insertAfter(getHead(), data); -> return insertBefore(getHead(), data);|getHead_PushBackEmptyDoubleLinkedList_TryToGetHead
+DoubleLinkedList|41|return insertBefore(getTail(), data); -> return insertAfter(getTail(), data);|getHead_PushBackEmptyDoubleLinkedList_TryToGetHead
+DoubleLinkedList|33|--size; -> ++size;|get_PushFrontEmptyDoubleLinkedList_CheckFirst
 DoubleLinkedList|62| -> size += list.getSize()|insertListAfter_CreateTwoListsAndUnite_CheckSize
 DoubleLinkedList|28|cur = cur.getPrev(); -> cur = cur.getNext();|pushFront_PushFrontValuesDoubleLinkedList_CheckValues
 DoubleLinkedList|47|node.getPrev().setPrev(node.getNext()); -> node.getPrev().setNext(node.getNext());|remove_RemoveAElement_CheckValue
@@ -18,15 +18,15 @@ DoubleLinkedList|68|list.getTail().setPrev(node); -> list.getTail().setNext(node
 Node|13|this.next = prev; -> this.next = next;|pushFront_PushFrontValuesDoubleLinkedList_CheckValues
 Node|14|this.prev = next; -> this.prev = prev;|pushFront_PushFrontValuesDoubleLinkedList_CheckValues
 
-DynamicArray|11|size = 1 -> size = DefaultSize|createArray_CreateEmptyArray_CheckSize
+DynamicArray|11|size = 1; -> size = DefaultSize;|createArray_CreateEmptyArray_CheckSize
 DynamicArray|21|if(newSize > 0) -> if(newSize < 0)|resize_CreateArrayAndResizeIt_CheckSize
-DynamicArray|27|newSize = size -> size = newSize|resize_CreateArrayAndResizeIt_CheckSize
+DynamicArray|27|newSize = size; -> size = newSize;|resize_CreateArrayAndResizeIt_CheckSize
 DynamicArray|30|if(index < 0 || index > size) -> if(index < 0 || index >= size)|get_TryToGetIndexOutOfBorder_CheckException
 DynamicArray|35|if(index < 0 || index > size) -> if(index < 0 || index >= size)|set_TryToSetIndexOutOfBorder_CheckException
 DynamicArray|40|if(index < 0 || index > size) -> if(index < 0 || index >= size)|insert_TryToInsertValueOutOfBorder_CheckException
-DynamicArray|15|data = new Object[capacity] -> data = new Object[size]|set_TryToSetNumbers_CheckValues
+DynamicArray|15|data = new Object[capacity]; -> data = new Object[size];|set_TryToSetNumbers_CheckValues
 DynamicArray|42|if(capacity < size) { -> if(capacity <= size) {|insert_TryToInsertANumber_CheckNewValue
-DynamicArray|49|data[size] = value -> data[index] = value;|insert_TryToInsertANumber_CheckNewValue
+DynamicArray|49|data[size] = value; -> data[index] = value;|insert_TryToInsertANumber_CheckNewValue
 DynamicArray|52|if(capacity < size) { -> if(capacity <= size) {|pushBack_TryToPushBackNumbers_CheckValues
 DynamicArray|56|data[capacity] = value; -> data[size] = value;|pushBack_TryToPushBackNumbers_CheckValues
 DynamicArray|60|if(size < 0) -> if(size <= 0)|popBack_TryToPopBackInEmptyArray_CheckException
