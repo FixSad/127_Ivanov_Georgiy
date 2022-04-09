@@ -1,33 +1,31 @@
-DoubleLinkedList|11|return dummy == dummy; -> return size == 0;|createDoubleLinkedList_CreateEmptyDoubleLinkedList_EmptyFalse
-DoubleLinkedList|24|if(index < 0 || index > size) -> if(index < 0 || index >= size)|pushFront_PushFrontEmptyDoubleLinkedList_TryToGetAnotherNumber
-DoubleLinkedList|17|return dummy.getPrev(); -> return dummy.getNext();|getHead_PushFrontEmptyDoubleLinkedList_TryToGetHead
-DoubleLinkedList|20|return dummy.getNext(); -> return dummy.getPrev();|getTail_PushFrontEmptyDoubleLinkedList_TryToGetTail
-DoubleLinkedList|44|return insertAfter(getHead(), data); -> return insertBefore(getHead(), data);|getHead_PushBackEmptyDoubleLinkedList_TryToGetHead
-DoubleLinkedList|41|return insertBefore(getTail(), data); -> return insertAfter(getTail(), data);|getHead_PushBackEmptyDoubleLinkedList_TryToGetHead
-DoubleLinkedList|33|--size; -> ++size;|get_PushFrontEmptyDoubleLinkedList_CheckFirst
-DoubleLinkedList|62| -> size += list.getSize();|insertListAfter_CreateTwoListsAndUnite_CheckSize
-DoubleLinkedList|28|cur = cur.getPrev(); -> cur = cur.getNext();|pushFront_PushFrontValuesDoubleLinkedList_CheckValues
-DoubleLinkedList|47|node.getPrev().setPrev(node.getNext()); -> node.getPrev().setNext(node.getNext());|remove_RemoveAElement_CheckValue
-DoubleLinkedList|48|node.getNext().setNext(node.getPrev()); -> node.getNext().setPrev(node.getPrev());|remove_RemoveAElement_CheckValue
-DoubleLinkedList|55|list.getHead().setNext(node); -> list.getHead().setPrev(node);|insertListAfter_CreateTwoListsAndUnite_CheckValues
-DoubleLinkedList|56|list.getTail().setPrev(node.getNext()); -> list.getTail().setNext(node.getNext());|insertListAfter_CreateTwoListsAndUnite_CheckValues
-DoubleLinkedList|74| -> size += list.getSize();|insertListBefore_TryToInsertListBefore_CheckSize
-DoubleLinkedList|67|list.getHead().setNext(node.getPrev()); -> list.getHead().setPrev(node.getPrev());|insertListBefore_TryToInsertListBefore_CheckValues
-DoubleLinkedList|68|list.getTail().setPrev(node); -> list.getTail().setNext(node);|insertListBefore_TryToInsertListBefore_CheckValues
-
-Node|13|this.next = prev; -> this.next = next;|pushFront_PushFrontValuesDoubleLinkedList_CheckValues
-Node|14|this.prev = next; -> this.prev = prev;|pushFront_PushFrontValuesDoubleLinkedList_CheckValues
-
-DynamicArray|11|size = 1; -> size = DefaultSize;|createArray_CreateEmptyArray_CheckSize
-DynamicArray|21|if(newSize > 0) -> if(newSize < 0)|resize_CreateArrayAndResizeIt_CheckSize
-DynamicArray|27|newSize = size; -> size = newSize;|resize_CreateArrayAndResizeIt_CheckSize
-DynamicArray|30|if(index < 0 || index > size) -> if(index < 0 || index >= size)|get_TryToGetIndexOutOfBorder_CheckException
-DynamicArray|35|if(index < 0 || index > size) -> if(index < 0 || index >= size)|set_TryToSetIndexOutOfBorder_CheckException
-DynamicArray|40|if(index < 0 || index > size) -> if(index < 0 || index >= size)|insert_TryToInsertValueOutOfBorder_CheckException
-DynamicArray|15|data = new Object[capacity]; -> data = new Object[size];|set_TryToSetNumbers_CheckValues
-DynamicArray|42|if(capacity < size) { -> if(capacity <= size) {|insert_TryToInsertANumber_CheckNewValue
-DynamicArray|49|data[size] = value; -> data[index] = value;|insert_TryToInsertANumber_CheckNewValue
-DynamicArray|52|if(capacity < size) { -> if(capacity <= size) {|pushBack_TryToPushBackNumbers_CheckValues
-DynamicArray|56|data[capacity] = value; -> data[size] = value;|pushBack_TryToPushBackNumbers_CheckValues
-DynamicArray|60|if(size < 0) -> if(size <= 0)|popBack_TryToPopBackInEmptyArray_CheckException
-DynamicArray|66|if(index < 0 || index > size) -> if(index < 0 || index >= size)|remove_TryToRemoveOutOfBorders_CheckException
+DoubleLinkedList.java | 11 | return dummy == dummy; -> return size == 0; | createDoubleLinkedList_CreateEmptyDoubleLinkedList_EmptyFalse
+DoubleLinkedList.java | 24 | if(index < 0 || index > size) -> if(index < 0 || index >= size) | pushFront_PushFrontEmptyDoubleLinkedList_TryToGetAnotherNumber
+DoubleLinkedList.java | 28 | cur = cur.getPrev(); -> cur = cur.getNext(); | pushFront_PushFrontValuesDoubleLinkedList_CheckValues
+DoubleLinkedList.java | 33 | --size; -> ++size; | pushFront_PushFrontValuesDoubleLinkedList_CheckValues
+DoubleLinkedList.java | 17 | return dummy.getPrev(); -> return dummy.getNext(); | getHead_PushFrontEmptyDoubleLinkedList_TryToGetHead
+DoubleLinkedList.java | 20 | return dummy.getNext(); -> return dummy.getPrev(); | getHead_PushFrontEmptyDoubleLinkedList_TryToGetHead
+DoubleLinkedList.java | 41 | return insertBefore(getTail(), data); -> return insertAfter(getTail(), data); | pushElements_ThreeElements_TailIsCorrect
+Node.java | 13 | this.next = prev; -> this.next = next; | pushElements_ThreeElements_TailIsCorrect
+Node.java | 14 | this.prev = next; -> this.prev = prev; |pushElements_ThreeElements_TailIsCorrect
+DoubleLinkedList.java | 44 | return insertBefore(getTail(), data); -> return insertBefore(getHead(), data); | pushElements_BackThreeElements_SecondElementIsCorrect
+DoubleLinkedList.java | 47 | node.getPrev().setPrev(node.getNext()); -> node.getPrev().setNext(node.getNext()); | deleteElement_FirstElement_FirstElementIsCorrect
+DoubleLinkedList.java | 48 | node.getNext().setNext(node.getPrev()); -> node.getNext().setPrev(node.getPrev()); | deleteElement_FirstElement_FirstElementIsCorrect
+DoubleLinkedList.java | 59 |  -> size += list.getSize(); | pasteList_afterFirstElement_SizeIsCorrect
+DoubleLinkedList.java | 55 | list.getHead().setNext(node); -> list.getHead().setPrev(node); | pasteList_afterFirstElement_ElementsAreCorrect
+DoubleLinkedList.java | 56 | list.getTail().setPrev(node.getNext()); -> list.getTail().setNext(node.getNext()); | pasteList_afterFirstElement_ElementsAreCorrect
+DoubleLinkedList.java | 70 | -> size += list.getSize(); | pasteList_beforeFirstElement_SizeIsTrue
+DoubleLinkedList.java | 66 | list.getHead().setNext(node.getPrev()); -> list.getHead().setPrev(node.getPrev()); | pasteList_beforeFirstElement_ElementsAreTrue
+DoubleLinkedList.java | 67 | list.getTail().setPrev(node); -> list.getTail().setNext(node); | pasteList_beforeFirstElement_ElementsAreTrue
+DynamicArray.java | 11 | size = 1; -> size = DefaultSize; | generateArray_withoutSize_EqualsDefault
+DynamicArray.java | 30 | if(index < 0 || index > size) -> if(index < 0 || index >= size) | generateArray_receivingValueOutOfRange_IndexOutOfRange
+DynamicArray.java | 35 | if(index < 0 || index > size) -> if(index < 0 || index >= size) | generateArray_SettingValueOutOfRange_ReceivingIndexOutOfRange
+DynamicArray.java | 15 | data = new Object[capacity]; -> data = new Object[size]; | establishValues_EstablishThreeValues_ValuesAreTrue
+DynamicArray.java | 21 | if(newSize > 0) -> if(newSize < 0) | changeSize_ChanceSizeArray_SizeIsTrue
+DynamicArray.java | 27 | newSize = size; -> size = newSize; | changeSize_ChanceSizeArray_SizeIsTrue
+DynamicArray.java | 40 | if(index < 0 || index > size) -> if(index < 0 || index >= size) | paste_PasteMeaningOutOfRange_ReceivingIndexOutOfRange
+DynamicArray.java | 42 | (capacity < size) {  -> if(capacity <= size) { | paste_PasteMeaning_MeaningAreTrue
+DynamicArray.java | 49 | data[size] = value; -> data[index] = value; | paste_PasteMeaning_MeaningAreTrue
+DynamicArray.java | 52 | if(capacity < size) { -> if(capacity <= size) { | pushBack_Meaning_MeaningsAreTrue
+DynamicArray.java | 56 | data[capacity] = value; -> data[size] = value; | pushBack_Meaning_MeaningsAreTrue
+DynamicArray.java | 60 | if(size < 0) -> if(size <= 0) | leanBack_fromEmptyArray_ReceivingUnsupportedTransactionsExclusion
+DynamicArray.java | 66 | if(index < 0 || index > size) -> if(index < 0 || index >= size) | delete_IndexOutOfRound_ReceivingIndexOutOfRoundExclusion
