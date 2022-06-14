@@ -1,0 +1,7 @@
+C:\Users\Goga\Documents\GitHub\127_ivanov_georgiy\2sem\hw\Bonus\RogueLikeTest\RogueLikeTest\bin\Debug\RogueLikeTest.exe.config
+C:\Users\Goga\Documents\GitHub\127_ivanov_georgiy\2sem\hw\Bonus\RogueLikeTest\RogueLikeTest\bin\Debug\RogueLikeTest.exe
+C:\Users\Goga\Documents\GitHub\127_ivanov_georgiy\2sem\hw\Bonus\RogueLikeTest\RogueLikeTest\bin\Debug\RogueLikeTest.pdb
+C:\Users\Goga\Documents\GitHub\127_ivanov_georgiy\2sem\hw\Bonus\RogueLikeTest\RogueLikeTest\obj\Debug\RogueLike.csproj.AssemblyReference.cache
+C:\Users\Goga\Documents\GitHub\127_ivanov_georgiy\2sem\hw\Bonus\RogueLikeTest\RogueLikeTest\obj\Debug\RogueLike.csproj.CoreCompileInputs.cache
+C:\Users\Goga\Documents\GitHub\127_ivanov_georgiy\2sem\hw\Bonus\RogueLikeTest\RogueLikeTest\obj\Debug\RogueLikeTest.exe
+C:\Users\Goga\Documents\GitHub\127_ivanov_georgiy\2sem\hw\Bonus\RogueLikeTest\RogueLikeTest\obj\Debug\RogueLikeTest.pdb

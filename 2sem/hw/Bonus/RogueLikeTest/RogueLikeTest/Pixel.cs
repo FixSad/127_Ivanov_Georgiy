@@ -41,16 +41,12 @@ namespace RogueLikeTest
     class GameObject : Pixel
     {
         public bool IsAlive { get; private set; } = true;
-        public byte HP { get; private set; } = 55;
+        public byte HP { get; private set; } = 95;
         protected byte _damage;
         protected Direction _currentDirection = Direction.None;
         private byte _deadEnemies = 0;
 
-        public GameObject(int x, int y, char symbol, ConsoleColor color = ConsoleColor.White) : base (x, y, symbol, color) 
-        {
-
-
-        }
+        public GameObject(int x, int y, char symbol, ConsoleColor color = ConsoleColor.White) : base (x, y, symbol, color) { }
 
         public void PrintHealthBar(Pixel[,] map, List<string> lines)
         {
@@ -171,6 +167,11 @@ namespace RogueLikeTest
 
         public void TryMove(List<Enemy> enemies, Pixel[,] pixels2, Pixel heart)
         {
+            if (HP <= 0)
+            {
+                IsAlive = false;
+            }
+
             ChangeDirection();
             Clear();
 
@@ -199,6 +200,7 @@ namespace RogueLikeTest
                 {
                     if (X == enemy.X && Y == enemy.Y)
                     {
+                        HP -= enemy._damage;
                         enemy.IsAlive = false;
                         enemy.X = pixels2.GetLength(1) + 16 + _deadEnemies;
                         enemy.Y = 3;
@@ -233,7 +235,10 @@ namespace RogueLikeTest
     {
         public byte ID;
         public bool IsAlive = true;
-        public Enemy(int x, int y, char symbol, ConsoleColor color = ConsoleColor.White) : base(x, y, symbol, color) { }
+        public Enemy(int x, int y, char symbol, Random random, ConsoleColor color = ConsoleColor.White) : base(x, y, symbol, color)
+        {
+            _damage = (byte)random.Next(4, 15);
+        }
 
         public new void ChangeDirection()
         {

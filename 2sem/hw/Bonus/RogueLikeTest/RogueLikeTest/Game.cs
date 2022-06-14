@@ -33,41 +33,47 @@ namespace RogueLikeTest
                     }
                 }
 
+                GameObject gameObject;
+                EnemiesActions enemiesActions;
+                List<Enemy> enemies;
 
-                // Игра
-                Random random = new Random();
-
-                Console.Clear();
-                GameObject gameObject = new GameObject(2, 3, '☺', ConsoleColor.Cyan);
-                List<Enemy> enemies = new List<Enemy>();
-                EnemiesActions enemiesActions = new EnemiesActions(5, gameObject);
-
-                Console.Clear();
-                enemiesActions.room.Draw();
-                enemiesActions.GenerateHeart();
-
-                gameObject.Draw();
-
-
-                Thread thread = new Thread(ThreadAction);
-                thread.Start(enemiesActions);
-
-                gameObject.PrintHealthBar(enemiesActions.room.pixels2, lines);
-                enemiesActions.PrintKilledEnemies(lines);
-
-                while (gameObject.IsAlive == true)
+                for (int i = 0; i < 3; i++)
                 {
-                    enemiesActions.PrintKilledEnemies(lines);
+                    // Игра
+                    Random random = new Random();
+
+                    Console.Clear();
+                    gameObject = new GameObject(2, 3, '☺', ConsoleColor.Cyan);
+                    enemies = new List<Enemy>();
+                    enemiesActions = new EnemiesActions(5, gameObject);
+
+                    Console.Clear();
+                    enemiesActions.room.Draw();
+                    enemiesActions.GenerateHeart();
+
+                    gameObject.Draw();
+
+
+                    Thread thread = new Thread(ThreadAction);
+                    thread.Start(enemiesActions);
 
                     gameObject.PrintHealthBar(enemiesActions.room.pixels2, lines);
+                    enemiesActions.PrintKilledEnemies(lines);
 
-                    gameObject.TryMove(enemiesActions.enemies, enemiesActions.room.pixels2, enemiesActions.heart);
+                    while (gameObject.IsAlive == true)
+                    {
+                        enemiesActions.PrintKilledEnemies(lines);
 
+                        gameObject.PrintHealthBar(enemiesActions.room.pixels2, lines);
+
+                        gameObject.TryMove(enemiesActions.enemies, enemiesActions.room.pixels2, enemiesActions.heart);
+
+                    }
+                    thread.Abort();
                 }
                 gameObject = null;
                 enemiesActions = null;
                 enemies = null;
-                thread.Abort();
 
                 Console.Clear();
 
@@ -144,7 +150,7 @@ namespace RogueLikeTest
         {
             for (byte i = 0; i < EnemyCount; i++)
             {
-                enemies.Add(new Enemy(random.Next(1, room.pixels2.GetLength(1) - 2), random.Next(1, room.pixels2.GetLength(0) - 2), '♂', ConsoleColor.DarkMagenta) { ID = i });
+                enemies.Add(new Enemy(random.Next(1, room.pixels2.GetLength(1) - 2), random.Next(1, room.pixels2.GetLength(0) - 2), '♂',random ,ConsoleColor.DarkMagenta) { ID = i });
             }
 
             for (byte i = 0; i < enemies.Count; i++)
@@ -152,7 +158,7 @@ namespace RogueLikeTest
                 for (byte j = (byte)(i + 1); j < enemies.Count; j++)
                 {
                     if (enemies[i].X == enemies[j].X && enemies[i].Y == enemies[j].Y)
-                        enemies[j] = new Enemy(random.Next(1, room.pixels2.GetLength(1) - 2), random.Next(1, room.pixels2.GetLength(0) - 2), '♂', ConsoleColor.DarkMagenta) { ID = j };
+                        enemies[j] = new Enemy(random.Next(1, room.pixels2.GetLength(1) - 2), random.Next(1, room.pixels2.GetLength(0) - 2), '♂',random ,ConsoleColor.DarkMagenta) { ID = j };
                 }
             }
         }
