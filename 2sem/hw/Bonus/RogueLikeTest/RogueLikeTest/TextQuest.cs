@@ -41,8 +41,9 @@ namespace RogueLikeTest
             }
             catch (Exception ex)
             {
-                /*_isException = true;
-                Console.WriteLine("Problems with the txt File");*/
+                _isException = true;
+                Console.WriteLine("Problems with the txt File");
+                Console.ReadKey();
             }
         }
 
